@@ -22,3 +22,16 @@ When the reward signal is largely uninformative in this way, we say that the tas
 - Episodic tasks are tasks with a well-defined starting and ending point.
   - In this case, we refer to a complete sequence of interaction, from start to finish, as an episode.
   - Episodic tasks come to an end whenever the agent reaches a terminal state.
+
+- Reward hypothesis: All goals can be framed as the maximization of the expected cummulative reward.
+
+- Discounted Return
+For an arbitrary time step 𝑡, both refer to:
+
+𝐺𝑡 ≐ 𝑅𝑡+1 + γ𝑅𝑡+2 + γ²𝑅𝑡+3 + …
+
+∑𝑘=0∞ γᵏ𝑅𝑡+k+1
+
+where 𝛾 ∈ [0, 1].
+
+In particular, when we refer to "return," it is not necessarily the case that 𝛾 = 1; and when we refer to "discounted return," it is not necessarily true that 𝛾 < 1.
