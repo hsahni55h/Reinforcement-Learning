@@ -5,5 +5,5 @@ The basic idea is to start with raw sensor input, define a goal for the robot, a
 In this paradigm, perception, internal state, planning, control, and even sensor and measurement uncertainty, are not explicitly defined. 
 All of those traditional steps between observations (the sensory input) and actionable output are learned by a neural network.
 
-![A cute cat](images/intro_reinforcement learning.png)
+![Intro Reinforcement Learning](images/intro_reinforcement learning.png)
 
