@@ -45,14 +45,16 @@ $$
 \sum_{k=0}^{\infty} \gamma^k R_{t+k+1}, \text{ where } \gamma \in [0,1]
 $$
 
-In particular, when we refer to "return," it is not necessarily the case that $$\gamma\$$ = 1; and when we refer to "discounted return," it is not necessarily true that $$\gamma\$$ < 1.
+In particular, when we refer to "return," it is not necessarily the case that 𝛾 = 1; and when we refer to "discounted return," it is not necessarily true that 𝛾 < 1.
 
-- The discount rate $$\gamma\$$ is something that you set to refine the goal that you have for the agent.
-- It must satisfy 0 ≤ $$\gamma\$$ ≤ 1.
-- If $$\gamma\$$ = 0, the agent only cares about the most immediate reward.
-- If $$\gamma\$$ = 1, the return is not discounted.
-- For larger values of $$\gamma\$$, the agent cares more about the distant future.
-- Smaller values of $$\gamma\$$ result in more extreme discounting, where - in the most extreme case - the agent only cares about the most immediate reward.
+
+
+- The discount rate 𝛾 is something that you set to refine the goal that you have for the agent.
+- It must satisfy 0 ≤ 𝛾 ≤ 1.
+- If 𝛾 = 0, the agent only cares about the most immediate reward.
+- If 𝛾 = 1, the return is not discounted.
+- For larger values of 𝛾, the agent cares more about the distant future.
+- Smaller values of 𝛾 result in more extreme discounting, where - in the most extreme case - the agent only cares about the most immediate reward.
 
 
 # Markov Decision Process (MDP).
