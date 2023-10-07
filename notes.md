@@ -30,9 +30,9 @@ For an arbitrary time step 𝑡, both refer to:
 
 𝐺𝑡 ≐ 𝑅ₜ₊₁ + γ𝑅ₜ₊₂ + γ²𝑅ₜ₊₃ + …
 
-\[
+$$
 \sum_{k=0}^{\infty} \gamma^k R_{t+k+1}, \text{ where } \gamma \in [0,1]
-\]
+$$
 
 
 where 𝛾 ∈ [0, 1].
