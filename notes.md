@@ -8,6 +8,17 @@ All of those traditional steps between observations (the sensory input) and acti
 ![Intro Reinforcement Learning](images/intro_reinforcement%20learning.png)
 
 
+## The Setting
+
+The reinforcement learning (RL) framework is characterized by an agent learning to interact with its environment.
+
+At each time step, the agent receives the environment's state (the environment presents a situation to the agent), and the agent must choose an appropriate action in response. One time step later, the agent receives a reward (the environment indicates whether the agent has responded appropriately to the state) and a new state.
+
+All agents have the goal to maximize expected cumulative reward, or the expected sum of rewards attained over all time steps.
+
+![Agent-Environment Interaction in Reinforcement Learning](images/agent-environment%20interaction%20in%20reinforcement%20learning.png)
+
+
 # Sparse Rewards in Reinforcement Learning
 Say you are an agent, and your goal is to play chess. At every time step, you choose any action from the set of possible moves in the game. Your opponent is part of the environment; she responds with her own move, and the state you receive at the next time step is the configuration of the board, when it’s your turn to choose a move again. The reward is only delivered at the end of the game, and, let’s say, is +1 if you win, and -1 if you lose.
 
@@ -23,7 +34,7 @@ When the reward signal is largely uninformative in this way, we say that the tas
   - In this case, we refer to a complete sequence of interaction, from start to finish, as an episode.
   - Episodic tasks come to an end whenever the agent reaches a terminal state.
 
-- Reward hypothesis: All goals can be framed as the maximization of the expected cummulative reward.
+- Reward hypothesis: All goals can be framed as the maximization of (expected) cumulative reward.
 
 - Discounted Return
 For an arbitrary time step 𝑡, both refer to:
@@ -34,7 +45,15 @@ $$
 \sum_{k=0}^{\infty} \gamma^k R_{t+k+1}, \text{ where } \gamma \in [0,1]
 $$
 
-In particular, when we refer to "return," it is not necessarily the case that 𝛾 = 1; and when we refer to "discounted return," it is not necessarily true that 𝛾 < 1.
+In particular, when we refer to "return," it is not necessarily the case that $$\gamma \ = 1; and when we refer to "discounted return," it is not necessarily true that $$\gamma \ < 1.
+
+- The discount rate $$\gamma \ is something that you set to refine the goal that you have for the agent.
+- It must satisfy 0 ≤ $$\gamma \ ≤ 1.
+- If $$\gamma \ = 0, the agent only cares about the most immediate reward.
+- If $$\gamma \ = 1, the return is not discounted.
+- For larger values of $$\gamma \, the agent cares more about the distant future.
+- Smaller values of $$\gamma \ result in more extreme discounting, where - in the most extreme case - the agent only cares about the most immediate reward.
+
 
 # Markov Decision Process (MDP).
 
