@@ -38,14 +38,14 @@ In particular, when we refer to "return," it is not necessarily the case that �
 
 # Markov Decision Process (MDP).
 
-In general, the state space 𝒮 is the set of all nonterminal states.
+In general, the state space S is the set of all nonterminal states.
 
-In continuing tasks (like the recycling task detailed in the video), this is equivalent to the set of all states.
+In continuing tasks, this is equivalent to the set of all states.
 
-In episodic tasks, we use 𝒮⁺ to refer to the set of all states, including terminal states.
+In episodic tasks, we use S⁺ to refer to the set of all states, including terminal states.
 
-The action space 𝒜 is the set of possible actions available to the agent.
+The action space A is the set of possible actions available to the agent.
 
-In the event that there are some states where only a subset of the actions are available, we can also use 𝒜(𝑠) to refer to the set of actions available in state 𝑠 ∈ 𝒮.
+In the event that there are some states where only a subset of the actions are available, we can also use A(s) to refer to the set of actions available in state s ∈ S.
 
 
