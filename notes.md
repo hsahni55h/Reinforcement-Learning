@@ -51,18 +51,18 @@ In the event that there are some states where only a subset of the actions are a
 
 At an arbitrary time step 𝑡, the agent-environment interaction has evolved as a sequence of states, actions, and rewards:
 
-(𝑆₀,𝐴₀,𝑅₁,𝑆₁,𝐴₁,…,𝑅ₜ₋₁,𝑆ₜ₋₁,𝐴ₜ₋₁,𝑅ₜ,𝑆ₜ,𝐴ₜ).
+(S₀, A₀, R₁, S₁, A₁, …, Rₜ₋₁, Sₜ₋₁, Aₜ₋₁, Rₜ, Sₜ, Aₜ)
 
-When the environment responds to the agent at time step 𝑡+1, it considers only the state and action at the previous time step (𝑆ₜ,𝐴ₜ).
+When the environment responds to the agent at time step t+1, it considers only the state and action at the previous time step (Sₜ, Aₜ).
 
-In particular, it does not care what state was presented to the agent more than one step prior. (In other words, the environment does not consider any of 𝑆₀,…,𝑆ₜ₋₁.)
+In particular, it does not care what state was presented to the agent more than one step prior. (In other words, the environment does not consider any of S₀, …, Sₜ₋₁.)
 
-And, it does not look at the actions that the agent took prior to the last one. (In other words, the environment does not consider any of 𝐴₀,…,𝐴ₜ₋₁.)
+And, it does not look at the actions that the agent took prior to the last one. (In other words, the environment does not consider any of A₀, …, Aₜ₋₁.)
 
-Furthermore, how well the agent is doing or how much reward it is collecting has no effect on how the environment chooses to respond to the agent. (In other words, the environment does not consider any of 𝑅₀,…,𝑅ₜ.)
+Furthermore, how well the agent is doing or how much reward it is collecting has no effect on how the environment chooses to respond to the agent. (In other words, the environment does not consider any of R₀, …, Rₜ.)
 
 Because of this, we can completely define how the environment decides the state and reward by specifying
 
 𝑝(𝑠′,𝑟∣𝑠,𝑎) ≐ 𝑃(𝑆ₜ₊₁ = 𝑠′, 𝑅ₜ₊₁ = 𝑟∣𝑆ₜ = 𝑠, 𝐴ₜ = 𝑎)
 
-for each possible 𝑠′, 𝑟, 𝑠, and 𝑎. These conditional probabilities are said to specify the one-step dynamics of the environment.
+for each possible s′, r, s, and a. These conditional probabilities are said to specify the one-step dynamics of the environment.
