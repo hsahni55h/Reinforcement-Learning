@@ -28,10 +28,11 @@ When the reward signal is largely uninformative in this way, we say that the tas
 - Discounted Return
 For an arbitrary time step 𝑡, both refer to:
 
-𝐺𝑡 ≐ 𝑅𝑡+1 + γ𝑅𝑡+2 + γ²𝑅𝑡+3 + …
+𝐺𝑡 ≐ 𝑅𝑡₊₁ + γ𝑅𝑡₊₂ + γ²𝑅𝑡₊₃ + …
 
-∑𝑘=0∞ γᵏ𝑅𝑡+k+1
+∑ₖ₌₀∞ (γᵏ𝑅𝑡₊ₖ₊₁)
 
 where 𝛾 ∈ [0, 1].
 
 In particular, when we refer to "return," it is not necessarily the case that 𝛾 = 1; and when we refer to "discounted return," it is not necessarily true that 𝛾 < 1.
+
