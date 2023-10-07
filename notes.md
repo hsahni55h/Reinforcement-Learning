@@ -16,3 +16,9 @@ This is an episodic task, where an episode finishes when the game ends. The idea
 It's important to note that this problem is exceptionally difficult, because the feedback is only delivered at the very end of the game. So, if you lose a game (and get a reward of -1 at the end of the episode), it’s unclear when exactly you went wrong: maybe you were so bad at playing that every move was horrible, or maybe instead … you played beautifully for the majority of the game, and then made only a small mistake at the end.
 
 When the reward signal is largely uninformative in this way, we say that the task suffers the problem of sparse rewards. 
+
+- A task is an instance of the reinforcement learning (RL) problem.
+- Continuing tasks are tasks that continue forever, without end.
+- Episodic tasks are tasks with a well-defined starting and ending point.
+  - In this case, we refer to a complete sequence of interaction, from start to finish, as an episode.
+  - Episodic tasks come to an end whenever the agent reaches a terminal state.
