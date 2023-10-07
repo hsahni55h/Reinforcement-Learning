@@ -1,6 +1,6 @@
 -----------------------------------------------------------------------------------------------------------------------
 # Introduction
------------------------------------------------------------------------------------------------------------------------
+
 Deep Reinforcement Learning for Robotics is a paradigm shift. 
 The basic idea is to start with raw sensor input, define a goal for the robot, and let it figure out, through trial and error, the best way to achieve the goal.
 In this paradigm, perception, internal state, planning, control, and even sensor and measurement uncertainty, are not explicitly defined. 
