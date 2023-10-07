@@ -66,3 +66,12 @@ Because of this, we can completely define how the environment decides the state 
 𝑝(s′, r∣s, a) ≐ 𝑃(Sₜ₊₁ = s′, Rₜ₊₁ = r∣Sₜ = s, Aₜ = a)
 
 for each possible s′, r, s, and a. These conditional probabilities are said to specify the one-step dynamics of the environment.
+
+
+A Markov decision Process is defined by:
+- a (finite) set of states S
+- a (finite) set of actions A
+- a (finite) set of rewards R
+- the one step dynamics of the environment 
+    𝑝(s′, r∣s, a) ≐ 𝑃(Sₜ₊₁ = s′, Rₜ₊₁ = r∣Sₜ = s, Aₜ = a) for each possible s′, r, s, and a.
+- a discount rate  $$\gamma \in [0,1]$$
