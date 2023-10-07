@@ -63,6 +63,6 @@ Furthermore, how well the agent is doing or how much reward it is collecting has
 
 Because of this, we can completely define how the environment decides the state and reward by specifying
 
-𝑝(𝑠′,𝑟∣𝑠,𝑎) ≐ 𝑃(𝑆ₜ₊₁ = 𝑠′, 𝑅ₜ₊₁ = 𝑟∣𝑆ₜ = 𝑠, 𝐴ₜ = 𝑎)
+𝑝(s′, r∣s, a) ≐ 𝑃(Sₜ₊₁ = s′, Rₜ₊₁ = r∣Sₜ = s, Aₜ = a)
 
 for each possible s′, r, s, and a. These conditional probabilities are said to specify the one-step dynamics of the environment.
