@@ -1,4 +1,3 @@
------------------------------------------------------------------------------------------------------------------------
 # Introduction
 
 Deep Reinforcement Learning for Robotics is a paradigm shift. 
