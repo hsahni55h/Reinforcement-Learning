@@ -96,3 +96,76 @@ A Markov decision Process is defined by:
 - the one step dynamics of the environment 
     𝑝(s′, r∣s, a) ≐ 𝑃(Sₜ₊₁ = s′, Rₜ₊₁ = r∣Sₜ = s, Aₜ = a) for each possible s′, r, s, and a.
 - a discount rate  $$\gamma \in [0,1]$$
+
+
+# Policy
+
+A policy determines how an agent chooses an action in response to the current state. In other words, it specifies how the agent responds to situations that the environment has presented.
+## Deterministic Policy: 
+
+An example deterministic policy π
+: 𝑆 → 𝐴 can be specified as:
+
+- π (low) = recharge
+- π (high) = search
+
+In this case:
+
+- If the battery level is low, the agent chooses to recharge the battery.
+- If the battery level is high, the agent chooses to search for cans.
+
+
+## Stochastic Policy:
+
+An example stochastic policy π: 𝑆×𝐴 → [0,1] can be specified as:
+
+- π(recharge∣low) = 0.5
+- π(wait∣low) = 0.4
+- π(search∣low) = 0.1
+- π(search∣high) = 0.9
+- π(wait∣high) = 0.1
+
+In this case:
+
+- If the battery level is low, the agent recharges the battery with a 50% probability, waits for cans with a 40% probability, and searches for cans with a 10% probability.
+- If the battery level is high, the agent searches for cans with a 90% probability and waits for cans with a 10% probability.
+
+## State Value Function
+![State Value Function](images/statevaluefunction.png)
+
+
+## Bellman's Equations
+
+In this gridworld example:
+
+- Once the agent selects an action, it always moves in the chosen direction (contrasting general MDPs where the agent doesn't always have complete control over what the next state will be).
+- The reward can be predicted with complete certainty (contrasting general MDPs where the reward is a random draw from a probability distribution).
+
+The value of any state can be calculated as the sum of the immediate reward and the (discounted) value of the next state.
+
+For a general MDP, we have to work in terms of an expectation since it's not often the case that the immediate reward and the next state can be predicted with certainty. Indeed, the reward and next state are chosen according to the one-step dynamics of the MDP. In this case, where the reward 𝑟 and the next state 𝑠′ are drawn from a (conditional) probability distribution 𝑝(𝑠′,𝑟∣𝑠,𝑎), the Bellman Expectation Equation (for vπ) expresses the value of any state s in terms of the expected immediate reward and the expected value of the next state:
+<!-- vπ(s) = Eπ[Rₜ₊₁ + γvπ(Sₜ₊₁) | Sₜ = s] -->
+
+
+![Bellman Expectation Equation](images/bellmanexpectationequation.png)
+
+
+![Bellman Expectation Equation 1](images/bellmanexpectationequation1.png)
+
+## calculating the Expectation
+
+In the event that the agent's policy π is deterministic, the agent selects action aπ(s) when in state s, and the Bellman Expectation Equation can be rewritten as the sum over two variables (s′s′ and r):
+
+$$
+v_\pi(s) = \sum_{s' \in S^+, r \in R} p(s', r | s, \pi(s)) \left(r + \gamma v_\pi(s')\right)
+$$
+
+In this case, we multiply the sum of the reward and discounted value of the next state (r + γv_\pi(s')) by its corresponding probability p(s', r | s, π(s)) and sum over all possibilities to yield the expected value.
+
+If the agent's policy π is stochastic, the agent selects action a with probability π(a | s) when in state s, and the Bellman Expectation Equation can be rewritten as the sum over three variables (s′s′, rr, and aa):
+
+$$
+v_\pi(s) = \sum_{s' \in S^+, a \in A(s)} \pi(a | s) p(s', r | s, a) \left(r + \gamma v_\pi(s')\right)
+$$
+
+In this case, we multiply the sum of the reward and discounted value of the next state (r + γv_\pi(s')) by its corresponding probability π(a | s) p(s', r | s, a) and sum over all possibilities to yield the expected value.
