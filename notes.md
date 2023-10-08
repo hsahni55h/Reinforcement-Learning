@@ -163,7 +163,7 @@ $$
 v_\pi(s) = \sum_{s' \in S^+, r \in R} p(s', r | s, \pi(s)) \left(r + \gamma v_\pi(s')\right)
 $$
 
-In this case, we multiply the sum of the reward and discounted value of the next state (r + γv_π(s')) by its corresponding probability p(s', r |s, π(s)) and sum over all possibilities to yield the expected value.
+In this case, we multiply the sum of the reward and discounted value of the next state (r + γvπ(s')) by its corresponding probability p(s', r |s, π(s)) and sum over all possibilities to yield the expected value.
 
 If the agent's policy π is stochastic, the agent selects action a with probability π(a|s) when in state s, and the Bellman Expectation Equation can be rewritten as the sum over three variables (s′,r, and a):
 
