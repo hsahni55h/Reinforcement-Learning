@@ -158,3 +158,6 @@ $$
 ## Calculating the Expectation
 
 ![Calculating the Expectation](images/calculating%20theexpectation.png)
+
+## Optimal Policy 
+![Optimal Policy](images/optimalpolicy.png)
