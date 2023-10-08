@@ -157,18 +157,4 @@ $$
 
 ## Calculating the Expectation
 
-In the event that the agent's policy π is deterministic, the agent selects action π(s) when in state s, and the Bellman Expectation Equation can be rewritten as the sum over two variables (s' and r):
-
-$$
-v_\pi(s) = \sum_{s' \in S^+, r \in R} p(s', r | s, \pi(s)) \left(r + \gamma v_\pi(s')\right)
-$$
-
-In this case, we multiply the sum of the reward and discounted value of the next state (r + γvπ(s')) by its corresponding probability p(s', r |s, π(s)) and sum over all possibilities to yield the expected value.
-
-If the agent's policy π is stochastic, the agent selects action a with probability π(a|s) when in state s, and the Bellman Expectation Equation can be rewritten as the sum over three variables (s′,r, and a):
-
-$$
-v_\pi(s) = \sum_{s' \in S^+, r \in R, a \in A(s)} \pi(a | s) p(s', r | s, a) \left(r + \gamma v_\pi(s')\right)
-$$
-
-In this case, we multiply the sum of the reward and discounted value of the next state (r + γv_\pi(s')) by its corresponding probability π(a|s) p(s',r|s, a) and sum over all possibilities to yield the expected value.
+![Calculating the Expectation](images/calculating%20theexpectation.png)
