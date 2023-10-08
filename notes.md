@@ -144,7 +144,9 @@ In this gridworld example:
 The value of any state can be calculated as the sum of the immediate reward and the (discounted) value of the next state.
 
 For a general MDP, we have to work in terms of an expectation since it's not often the case that the immediate reward and the next state can be predicted with certainty. Indeed, the reward and next state are chosen according to the one-step dynamics of the MDP. In this case, where the reward 𝑟 and the next state 𝑠′ are drawn from a (conditional) probability distribution 𝑝(𝑠′,𝑟∣𝑠,𝑎), the Bellman Expectation Equation (for vπ) expresses the value of any state s in terms of the expected immediate reward and the expected value of the next state:
-<!-- vπ(s) = Eπ[Rₜ₊₁ + γvπ(Sₜ₊₁) | Sₜ = s] -->
+$$
+v_\pi(s) = E_\pi[R_{t+1} + \gamma v_\pi(S_{t+1}) | S_t = s]
+$$
 
 
 ![Bellman Expectation Equation](images/bellmanexpectationequation.png)
@@ -152,7 +154,7 @@ For a general MDP, we have to work in terms of an expectation since it's not oft
 
 ![Bellman Expectation Equation 1](images/bellmanexpectationequation1.png)
 
-## calculating the Expectation
+## Calculating the Expectation
 
 In the event that the agent's policy π is deterministic, the agent selects action aπ(s) when in state s, and the Bellman Expectation Equation can be rewritten as the sum over two variables (s′s′ and r):
 
