@@ -161,3 +161,11 @@ $$
 
 ## Optimal Policy 
 ![Optimal Policy](images/optimalpolicy.png)
+
+
+## Action Value Function
+![Action Value Function](images/actionvaluefunction.png)
+
+-For each state, the state-value function yields the expected return, if the agent starts in state s and then follows the policy for all time steps.
+
+-For each state and action, the action-value function yields the expected return, if the agent starts in state s, takes the action a and then follows the policy for all future time steps.
